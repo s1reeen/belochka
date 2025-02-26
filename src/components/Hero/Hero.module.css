@@ -1,0 +1,31 @@
+.title {
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.hero {
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  max-width: 595px;
+}
+
+.photo {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.photo img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo:hover img {
+  transform: translateY(-10px);
+}

@@ -1,0 +1,160 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  backdrop-filter: blur(10px);
+  height: 70px;
+}
+
+.headerWrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.burgerButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burgerLine {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burgerLine.open:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burgerLine.open:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerLine.open:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.menu {
+  position: fixed;
+  top: 70px;
+  right: -350px;
+  width: 350px;
+  height: calc(100vh - 70px);
+  background-color: var(--main-white-color);
+  opacity: 0.8;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 4;
+}
+
+.menuOpen {
+  right: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  border-radius: 8px;
+  color: var(--main-text-color);
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+@media (max-width: 789px) {
+  .burgerButton {
+    display: flex;
+  }
+
+  .header {
+    background-color: var(--main-white-color);
+  }
+  .menu {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 8px 12px;
+  }
+
+  .menu a:hover {
+    background-color: var(--main-text-color);
+    color: white;
+  }
+
+  .active {
+  }
+}
+
+@media (min-width: 790px) {
+  .menu {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    background-color: transparent;
+    backdrop-filter: none;
+    color: white;
+    align-items: center;
+    justify-content: flex-end;
+    top: auto;
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 30px;
+  }
+
+  .menu li {
+    margin-bottom: 0;
+  }
+
+  .burgerButton {
+    display: none;
+  }
+}

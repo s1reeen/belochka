@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
+
+:root {
+  --main-bg-color: #c7c4f7;
+  --main-text-color: #121212;
+  --main-white-color: #f7f7f7;
+  --main-footer-color: #0d0b1f;
+  --secondary-yellow-color: #fff04a;
+  --secondary-green-color: #d7ff67;
+  --secondary-blue-color: #7bfbff;
+}
+
+body {
+  font-family: "Tektur", sans-serif;
+  background-color: var(--main-bg-color);
+}
