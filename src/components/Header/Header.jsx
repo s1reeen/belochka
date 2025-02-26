@@ -1,7 +1,8 @@
-import css from "./Header.module.css";
 import { useState } from "react";
 import Logo from "../Logo/Logo";
 import { MdArrowOutward } from "react-icons/md";
+import css from "./Header.module.css";
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
@@ -27,9 +28,7 @@ const Header = () => {
           <nav className={`${css.menu} ${isMenuOpen ? css.menuOpen : ""}`}>
             <ul>
               <li>
-                <a className={css.active} href="#home">
-                  О НАС
-                </a>
+                <a href="#home">О НАС</a>
               </li>
               <li>
                 <a href="#features">РОУДМАП</a>
@@ -42,8 +41,7 @@ const Header = () => {
               </li>
               <li>
                 <a href="#faq">
-                  НАШ ТЕЛЕГРАМ
-                  <MdArrowOutward />
+                  НАШ ТЕЛЕГРАМ <MdArrowOutward />
                 </a>
               </li>
             </ul>

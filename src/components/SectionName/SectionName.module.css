@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  align-items: start;
+}
+
+.span {
+  background-color: white;
+  padding: 5px 10px;
+  border: 2px solid var(--main-text-color);
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+.title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0;
+  position: relative;
+  left: 10%;
+}

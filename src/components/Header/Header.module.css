@@ -1,23 +1,23 @@
 .header {
-  position: fixed;
+  position: fixed; /* Фиксация хедера сверху */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 3;
-  backdrop-filter: blur(10px);
-  height: 70px;
+  z-index: 10; /* Убедимся, что хедер всегда будет сверху */
+  backdrop-filter: blur(10px); /* Фон с эффектом размытия */
+  height: 70px; /* Установим высоту хедера */
+  background-color: var(--main-white-color); /* Фон хедера */
 }
 
 .headerWrapper {
-  max-width: 1360px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  padding: 0 20px;
-  font-weight: 400;
-  font-size: 1.1rem;
+  max-width: 1360px; /* Ограничим максимальную ширину */
+  width: 100%;
+  margin: 0 auto; /* Центрируем содержимое */
+  padding: 0 20px; /* Добавляем немного отступов */
+  height: 100%; /* Высота хедера */
 }
 
 .burgerButton {
@@ -69,7 +69,6 @@
 
 .menu ul {
   list-style: none;
-  padding: 20px;
   margin: 0;
 }
 
@@ -106,32 +105,31 @@
   z-index: 2;
 }
 
-@media (max-width: 789px) {
+@media (max-width: 799px) {
   .burgerButton {
     display: flex;
   }
 
-  .header {
-    background-color: var(--main-white-color);
-  }
   .menu {
     display: flex;
   }
 
+  .menu ul {
+    padding: 20px;
+  }
+
   .menu a {
     padding: 8px 12px;
+    text-decoration: none;
   }
 
   .menu a:hover {
     background-color: var(--main-text-color);
     color: white;
   }
-
-  .active {
-  }
 }
 
-@media (min-width: 790px) {
+@media (min-width: 800px) {
   .menu {
     position: static;
     width: auto;

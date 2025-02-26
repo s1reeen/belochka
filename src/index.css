@@ -13,4 +13,6 @@
 body {
   font-family: "Tektur", sans-serif;
   background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-weight: 500;
 }

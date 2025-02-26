@@ -1,31 +1,122 @@
-.title {
-  font-size: 80px;
-  font-style: normal;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-bottom: 50px;
-}
-
 .hero {
   padding-top: 70px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
 }
 
-.content {
-  max-width: 595px;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1360px;
+  width: 100%;
+  position: relative;
+}
+
+.leftBlock {
+  flex: 1 1 48%; /* Блок слева */
+  padding-right: 20px;
+}
+
+.rightBlock {
+  flex: 1 1 48%; /* Блок справа */
+  padding-left: 20px;
+}
+
+.title {
+  font-size: 80px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+.imageWrapper {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .photo {
-  display: inline-block;
-  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.photo img {
+/* Градиентный эффект для фона */
+.photo::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    var(--secondary-yellow-color) 20%,
+    transparent 80%
+  );
+  border-radius: 50%;
+  filter: blur(50px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Фоновые монеты */
+.tons {
+  width: 515px;
+  z-index: 0;
+  position: absolute;
+}
+
+/* Основной токен */
+.coin {
+  width: 442px;
+  z-index: 1;
   transition: transform 0.3s ease-in-out;
+  position: absolute; /* Добавлено абсолютное позиционирование для корректного наложения */
 }
 
-.photo:hover img {
+.coin:hover {
   transform: translateY(-10px);
+}
+
+.buyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 120px;
+  padding: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 2px solid var(--main-text-color);
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: var(--secondary-yellow-color);
+  color: var(--primary-text-color);
+  text-align: center;
+  gap: 10px;
+  box-shadow: 0px 5px 0px 3px var(--main-text-color);
+  overflow: hidden;
+  transition: all 0.3s ease; /* Добавлено плавное изменение для всех свойств */
+}
+
+.buyButton:hover {
+  justify-content: space-between;
+  box-shadow: 0px 10px 0px 3px var(--main-text-color);
+}
+
+.arrow {
+  width: 22px;
+  height: 22px;
 }
