@@ -1,0 +1,42 @@
+.partner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.partnerElem {
+  width: clamp(
+    200px,
+    50%,
+    433px
+  ); /* Ширина изменяется в зависимости от экрана */
+  height: auto; /* Высота будет вычисляться автоматически на основе соотношения сторон */
+  aspect-ratio: 433 / 343; /* Соотношение сторон для поддержания одинаковой формы */
+  flex-shrink: 1;
+  background-color: var(--main-white-color);
+  border-radius: 20px;
+  border: 5px solid var(--main-text-color);
+
+  display: flex; /* Добавляем flex для центрирования содержимого */
+  justify-content: center; /* Горизонтальное выравнивание */
+  align-items: center; /* Вертикальное выравнивание */
+  position: relative; /* Чтобы изображение было внутри блока */
+}
+
+.img {
+  width: 60%; /* Изображение будет растягиваться по ширине блока */
+  height: 60%; /* Изображение будет растягиваться по высоте блока */
+  object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
+}
+
+@media (max-width: 768px) {
+  .partner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .partnerElem {
+    width: 90%;
+  }
+}

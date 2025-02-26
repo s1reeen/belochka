@@ -15,29 +15,37 @@
 
 .img {
   max-width: 330px;
+  height: 265px;
   border-radius: 20px;
 }
 
 .bigImg {
   max-width: 680px;
+  max-height: 550px;
   border-radius: 20px;
 }
-
 .about {
   display: flex;
-  justify-content: space-between; /* Размещение элементов с максимальным промежутком между ними */
-  gap: 20px;
+  justify-content: space-between;
   padding-top: 50px;
+  align-items: flex-end; /* Добавлено для выравнивания картинок по верхнему краю */
 }
 
 .aboutL {
   display: flex;
-  flex-direction: column;
   gap: 20px;
-  align-items: end;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.aboutL > :first-child {
+  align-self: start;
 }
 
 .aboutR {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
 }

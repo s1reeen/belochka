@@ -1,0 +1,46 @@
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.phase {
+  background-color: lightgrey;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid var(--main-text-color);
+  margin: 10px 0;
+  box-shadow: -10px 10px 0px 0px var(--main-text-color);
+  max-width: 430px;
+}
+
+.phase:nth-child(2n) {
+  align-self: flex-end; /* Прилепить ко правому краю */
+}
+
+.active {
+  background-color: var(--secondary-yellow-color);
+}
+
+.inactive {
+  background-color: white;
+  opacity: 0.4;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.roadmap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 7px solid var(--main-text-color);
+  border-radius: 5px;
+}

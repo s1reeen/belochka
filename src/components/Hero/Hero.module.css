@@ -5,6 +5,7 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -13,7 +14,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1360px;
-  width: 100%;
+  max-width: 100%;
   position: relative;
 }
 
@@ -51,7 +52,6 @@
   width: 100%;
 }
 
-/* Градиентный эффект для фона */
 .photo::before {
   content: "";
   position: absolute;
@@ -70,14 +70,12 @@
   z-index: 0;
 }
 
-/* Фоновые монеты */
 .tons {
   width: 515px;
   z-index: 0;
   position: absolute;
 }
 
-/* Основной токен */
 .coin {
   width: 442px;
   z-index: 1;
@@ -108,7 +106,7 @@
   gap: 10px;
   box-shadow: 0px 5px 0px 3px var(--main-text-color);
   overflow: hidden;
-  transition: all 0.3s ease; /* Добавлено плавное изменение для всех свойств */
+  transition: all 0.3s ease;
 }
 
 .buyButton:hover {
