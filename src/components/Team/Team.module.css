@@ -1,0 +1,67 @@
+.partner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.partnerElem {
+  width: clamp(200px, 50%, 433px);
+  height: auto;
+  aspect-ratio: 433 / 343;
+  flex-shrink: 1;
+  background-color: var(--main-white-color);
+  border-radius: 20px;
+  border: 5px solid var(--main-text-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Контент прижат к низу */
+  overflow: hidden;
+}
+
+.img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0; /* Привязываем к нижнему краю блока */
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom; /* Фиксируем точку уменьшения снизу */
+  transition: transform 0.3s ease-in-out;
+}
+
+.partnerElem:hover .img {
+  transform: translateX(-50%) scale(0.7); /* Уменьшаем изображение, но точка привязки остается снизу */
+}
+
+.txt {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: clamp(24px, 5vw, 64px);
+  font-weight: bold;
+  line-height: 1.1;
+  color: black;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .partner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .partnerElem {
+    width: 90%;
+  }
+
+  .txt {
+    font-size: 44px;
+  }
+}

@@ -1,6 +1,8 @@
 .wrapper {
   display: flex;
   align-items: start;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .span {
@@ -18,5 +20,15 @@
   text-transform: uppercase;
   padding: 0;
   position: relative;
-  left: 10%;
+  left: 5%;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .span {
+    display: none;
+  }
 }

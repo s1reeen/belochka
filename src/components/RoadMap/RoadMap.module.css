@@ -1,7 +1,8 @@
 .roadmap {
   display: flex;
   flex-direction: column;
-  width: 1120px;
+  width: 100%; /* Use full width */
+  max-width: 1120px; /* Maximum width for large screens */
   margin: 0 auto;
   position: relative;
 }
@@ -14,10 +15,11 @@
   margin: 10px 0;
   box-shadow: -10px 10px 0px 0px var(--main-text-color);
   max-width: 430px;
+  width: 100%;
 }
 
 .phase:nth-child(2n) {
-  align-self: flex-end; /* Прилепить ко правому краю */
+  align-self: flex-end; /* Keep alternating left and right alignment */
 }
 
 .active {
@@ -25,8 +27,10 @@
 }
 
 .inactive {
-  background-color: white;
-  opacity: 0.4;
+  background-color: #d5d3f7;
+  color: #918fb3;
+  box-shadow: -10px 10px 0px 0px #918fb3;
+  border: 2px solid #918fb3;
 }
 
 .title {
@@ -43,4 +47,18 @@
   transform: translateX(-50%);
   border-left: 7px solid var(--main-text-color);
   border-radius: 5px;
+  z-index: -1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .roadmap {
+    flex-direction: column; /* Stack the phases vertically on small screens */
+    padding: 10px;
+  }
+
+  .phase {
+    max-width: 100%; /* Make each phase block take up full width */
+    margin: 10px 0; /* Reduce margin for better spacing */
+  }
 }

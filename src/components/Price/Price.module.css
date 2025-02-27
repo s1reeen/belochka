@@ -1,0 +1,42 @@
+.img {
+  max-width: 100%;
+  height: 702px;
+  border-radius: 40px;
+  border: 5px solid var(--main-text-color);
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.link {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--main-text-color);
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.arrow {
+  margin-left: 10px;
+}
+
+.frameOne,
+.frameTwo {
+  position: absolute;
+  top: 68%;
+  left: 1%;
+  z-index: 1;
+}
+
+.frameTwo {
+  top: 23%;
+  left: 86%;
+}

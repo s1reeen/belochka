@@ -1,0 +1,65 @@
+.footer {
+  background-color: var(--main-footer-color);
+  color: var(--main-white-color);
+  margin-top: 150px;
+  padding: 50px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.img {
+  width: 246px;
+  height: 58px;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+.arrow {
+  font-size: 24px;
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--secondary-yellow-color);
+  box-shadow: -2px 2px 0px 0px var(--main-white-color);
+  border: 0px solid;
+  margin-bottom: 150px;
+}
+
+.buyBlock {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buy:hover {
+  box-shadow: -2px 5px 0px 0px var(--main-white-color);
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .buyBlock {
+    align-items: center;
+  }
+}

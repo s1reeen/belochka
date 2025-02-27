@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 600;
+  margin: 0;
+}
+
+.elem {
+  width: clamp(200px, 30%, 423px);
+  height: 131px;
+  background-color: var(--secondary-yellow-color);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid var(--main-text-color);
+  margin: 10px 0;
+  box-shadow: -10px 10px 0px 0px var(--main-text-color);
+  word-wrap: break-word;
+}
+
+.elem p {
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+.link {
+  font-size: 24px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.linktxt {
+  max-width: 410px;
+  position: relative;
+  display: inline-block;
+}
+
+.linktxt a {
+  color: var(--main-text-color);
+}
+
+.linktxt a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 60px;
+  rotate: -4deg;
+  width: 166px;
+  height: 38px;
+  background-color: var(--main-white-color);
+  border-radius: 110%;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row; /* Элементы будут располагаться в один ряд */
+    justify-content: space-between;
+    width: 100%; /* Устанавливаем ширину контейнера на 100% */
+  }
+  .elem {
+    width: 100%; /* Каждый элемент будет занимать всю ширину экрана */
+    margin: 5px 0; /* Уменьшаем отступы для мобильных устройств */
+  }
+  .link {
+    display: none;
+  }
+}
