@@ -15,9 +15,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--main-text-color);
-  font-size: 24px;
+  font-size: clamp(14px, 5vw, 24px);
   font-weight: 400;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .link:hover {
@@ -25,7 +27,9 @@
 }
 
 .arrow {
-  margin-left: 10px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 .frameOne,
@@ -43,6 +47,6 @@
 
 @media (max-width: 768px) {
   .img {
-    border-radius: 75px;
+    border-radius: clamp(20px, 5vw, 40px);
   }
 }

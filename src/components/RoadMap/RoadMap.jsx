@@ -36,9 +36,9 @@ const phases = [
 
 const Roadmap = () => {
   return (
-    <>
-      <SectionName section="ROADMAP" title="" />
-      <div className={styles.roadmap}>
+    <section id="roadmap">
+      <SectionName section="РАЗВИТИЕ" title="РОАДМАП" />
+      <div id="roadmap" className={styles.roadmap}>
         {phases.map((phase, index) => (
           <div
             key={index}
@@ -52,7 +52,7 @@ const Roadmap = () => {
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

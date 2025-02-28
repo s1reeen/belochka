@@ -1,15 +1,14 @@
 .about {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
-  align-items: flex-end; /* Выравниваем картинки по верхнему краю */
+  align-items: flex-end;
   gap: 20px;
   width: 100%;
 }
 
 .text {
   max-width: 564px;
-  font-size: clamp(14px, 1.2vw, 18px);
+  font-size: clamp(14px, 1.2vw, 24px);
 }
 
 .aboutUs {
@@ -17,26 +16,31 @@
 }
 
 .img {
-  max-width: 330px;
-  height: auto; /* Делаем высоту адаптивной */
-  border-radius: 20px;
+  max-width: 320px; /* Но не больше 330px */
+  height: auto; /* Автоматическая высота */
   object-fit: cover;
 }
 
+.img,
 .bigImg {
-  max-width: 680px;
-  height: auto; /* Делаем высоту адаптивной */
+  border: 5px solid var(--main-text-color);
+  border-radius: 35px;
+}
+
+.bigImg {
+  width: 665px;
+  max-width: 680px; /* Но не больше 680px */
+  height: auto; /* Автоматическая высота */
   max-height: 550px;
-  border-radius: 20px;
   object-fit: cover;
 }
 
 .aboutL {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-direction: column;
   align-items: flex-end;
-  width: 100%;
+  flex: 1;
 }
 
 .aboutL > :first-child {
@@ -48,25 +52,42 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 20px;
+  flex: 1; /* Позволяет элементу сжиматься вместе с экраном */
 }
 
-/* Адаптация изображений для мобильных (≤768px) */
-@media (max-width: 1077px) {
+@media (max-width: 1024px) {
+  .bigImg {
+    max-width: 100%;
+  }
   .img {
-    max-width: 100%; /* Делаем изображение шириной в 100% от контейнера */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column-reverse;
+    align-items: stretch; /* Позволяем блокам растянуться по горизонтали */
+    padding: 0;
+    width: 100%;
+  }
+
+  .aboutL,
+  .aboutR {
+    width: 100%;
+    align-items: stretch; /* Убираем выравнивание по краям */
+  }
+
+  .img,
+  .bigImg {
+    max-width: 100%;
+    width: 100%; /* Можно добавить, если хотите, чтобы ширина точно была 100% */
+    height: auto;
   }
 
   .text {
     font-size: 24px;
     text-align: center;
     margin-top: 0;
-  }
-  .about {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding: 0;
-  }
-  .bigImg {
-    max-width: 100%;
   }
 }

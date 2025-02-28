@@ -28,20 +28,21 @@ const Header = () => {
           <nav className={`${css.menu} ${isMenuOpen ? css.menuOpen : ""}`}>
             <ul>
               <li>
-                <a href="#home">О НАС</a>
+                <a href="#aboutus">О НАС</a>
               </li>
               <li>
-                <a href="#features">РОУДМАП</a>
+                <a href="#roadmap">РОУДМАП</a>
               </li>
               <li>
-                <a href="#download">КАК КУПИТЬ</a>
+                <a href="#buy">КАК КУПИТЬ</a>
               </li>
               <li>
-                <a href="#faq">КОМАНДА</a>
+                <a href="#team">КОМАНДА</a>
               </li>
               <li>
-                <a href="#faq">
-                  НАШ ТЕЛЕГРАМ <MdArrowOutward />
+                <a href="https://t.me/belochka_ton">
+                  <span>НАШ ТЕЛЕГРАМ</span>
+                  <MdArrowOutward className={css.arrow} />
                 </a>
               </li>
             </ul>

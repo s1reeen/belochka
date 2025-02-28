@@ -13,7 +13,7 @@ const Footer = () => {
             <ul className={css.links}>
               <span className={css.span}>Соц.Сети</span>
               <li className={css.adress}>
-                <a href="#">Telegram</a>
+                <a href="https://t.me/belochka_ton">Telegram</a>
               </li>
               <li className={css.adress}>
                 <a href="#">TikTok</a>

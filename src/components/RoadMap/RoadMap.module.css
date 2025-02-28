@@ -5,6 +5,7 @@
   max-width: 1120px; /* Maximum width for large screens */
   margin: 0 auto;
   position: relative;
+  gap: 30px;
 }
 
 .phase {
@@ -16,6 +17,7 @@
   box-shadow: -10px 10px 0px 0px var(--main-text-color);
   max-width: 430px;
   width: 100%;
+  height: 220px;
 }
 
 .phase:nth-child(2n) {
@@ -38,6 +40,10 @@
   font-weight: 600;
 }
 
+.elem p {
+  font-size: 15px;
+}
+
 .roadmap::before {
   content: "";
   position: absolute;
@@ -55,7 +61,10 @@
 @media (max-width: 768px) {
   .roadmap {
     flex-direction: column; /* Stack the phases vertically on small screens */
-    padding: 10px;
+  }
+
+  .title {
+    font-size: 24px;
   }
 
   .phase {

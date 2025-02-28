@@ -6,7 +6,7 @@ import about3 from "../../assets/about3.jpg";
 
 const AboutUs = () => {
   return (
-    <section className={css.aboutUs}>
+    <section id="aboutus" className={css.aboutUs}>
       <SectionName section="О ПРОЕКТЕ" title="единственный в своём роде" />
       <div className={css.about}>
         <div className={css.aboutL}>

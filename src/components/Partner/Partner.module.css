@@ -28,15 +28,23 @@
   width: 60%; /* Изображение будет растягиваться по ширине блока */
   height: 60%; /* Изображение будет растягиваться по высоте блока */
   object-fit: contain; /* Сохраняет пропорции изображения и не обрезает его */
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.partnerElem:hover .img {
+  transform: scale(1.4);
+  bottom: -1px;
 }
 
 @media (max-width: 768px) {
   .partner {
     flex-direction: column;
     gap: 20px;
+    width: 100%;
   }
 
   .partnerElem {
-    width: 90%;
+    width: 100%;
   }
 }

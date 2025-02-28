@@ -6,9 +6,9 @@ import bomjS from "../../assets/bomjS.png";
 
 const Team = () => {
   return (
-    <>
+    <section id="team">
       <SectionName section="ПАРТНЁРЫ" title="наша команда" />
-      <section className={css.partner}>
+      <div className={css.partner}>
         <div className={css.partnerElem}>
           <span className={css.txt}>
             исламбек <br /> cиплый
@@ -27,8 +27,8 @@ const Team = () => {
           </span>
           <img className={css.img} src={bomjS} alt="" />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 export default Team;

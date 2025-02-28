@@ -3,7 +3,7 @@ import css from "./Buy.module.css";
 
 const Buy = () => {
   return (
-    <>
+    <section id="buy">
       <SectionName section="ИНСТРУКЦИЯ" title="как купить $belochka" />
       <div className={css.container}>
         <div className={css.elem}>
@@ -22,10 +22,10 @@ const Buy = () => {
       <div className={css.link}>
         <span className={css.linktxt}>
           Более подробный гайд по покупке токена находится в нашем{" "}
-          <a href="#">telegram</a>
+          <a href="https://t.me/belochka_ton">telegram</a>
         </span>
       </div>
-    </>
+    </section>
   );
 };
 export default Buy;

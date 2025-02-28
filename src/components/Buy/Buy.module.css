@@ -4,11 +4,13 @@
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .title {
   font-size: clamp(16px, 2vw, 24px);
   font-weight: 600;
+  font-size: 20px;
   margin: 0;
 }
 
@@ -41,31 +43,32 @@
   margin-top: 50px;
   display: flex;
   justify-content: flex-end;
+  margin-right: 180px;
 }
 
 .linktxt {
-  max-width: 410px;
+  max-width: 471px;
   position: relative;
   display: inline-block;
 }
 
 .linktxt a {
+  position: relative; /* Устанавливаем контекст для абсолютного позиционирования */
   color: var(--main-text-color);
 }
 
 .linktxt a::after {
   content: "";
   position: absolute;
-  bottom: -7px;
-  left: 60px;
-  rotate: -4deg;
-  width: 166px;
-  height: 38px;
+  bottom: -6px; /* Располагаем чуть ниже текста */
+  left: -30px; /* Привязываем к левому краю ссылки */
+  width: 166px; /* Или задайте нужную ширину */
+  height: 38px; /* Высота эффекта, можно подстроить */
   background-color: var(--main-white-color);
   border-radius: 110%;
-  z-index: -1;
+  transform: rotate(-4deg); /* Поворот эффекта */
+  z-index: -1; /* Чтобы эффект был позади текста */
 }
-
 @media (max-width: 768px) {
   .container {
     flex-direction: row; /* Элементы будут располагаться в один ряд */
@@ -77,6 +80,8 @@
     margin: 5px 0; /* Уменьшаем отступы для мобильных устройств */
   }
   .link {
-    display: none;
+    justify-content: center;
+    text-align: center;
+    margin-right: 0;
   }
 }

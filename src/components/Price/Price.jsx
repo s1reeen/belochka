@@ -32,7 +32,7 @@ const Price = () => {
           className={css.link}
           href="https://youtu.be/23OjXSI99Nc?si=hmYSxO66Tq9DfepP&t=26"
         >
-          Почему 1749?
+          <span>Почему 1749?</span>
           <MdArrowOutward className={css.arrow} />
         </a>
         {!isMobile && (
