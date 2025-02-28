@@ -7,25 +7,27 @@
   min-height: 100vh;
   overflow: hidden;
 }
+.text {
+  font-size: 24px;
+  max-width: 487px;
+  font-size: 400;
+}
 
-.container {
+.blocks {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   max-width: 1360px;
-  max-width: 100%;
-  position: relative;
+  margin: 0 auto;
 }
 
 .leftBlock {
-  flex: 1 1 48%; /* Блок слева */
-  padding-right: 20px;
+  flex: 1 1 48%;
+  padding-left: 20px;
 }
 
 .rightBlock {
   flex: 1 1 48%;
-  padding-left: 20px;
 }
 
 .title {
@@ -34,14 +36,7 @@
   text-transform: uppercase;
   margin-bottom: 50px;
   line-height: 1.2;
-}
-
-.imageWrapper {
-  max-width: 600px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
+  max-width: 595px;
 }
 
 .photo {
@@ -55,8 +50,8 @@
 .photo::before {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: 110%;
+  height: 110%;
   background: radial-gradient(
     circle,
     var(--secondary-yellow-color) 20%,
@@ -71,13 +66,12 @@
 }
 
 .tons {
-  width: 515px;
+  max-width: 80%;
   z-index: 0;
-  position: absolute;
 }
 
 .coin {
-  width: 442px;
+  max-width: 70%;
   z-index: 1;
   transition: transform 0.3s ease-in-out;
   position: absolute;
@@ -91,18 +85,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin-top: 120px;
+  width: 71%;
   padding: 25px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   border: 2px solid var(--main-text-color);
   cursor: pointer;
   border-radius: 50px;
   background-color: var(--secondary-yellow-color);
   color: var(--primary-text-color);
-  text-align: center;
   gap: 10px;
   box-shadow: 0px 5px 0px 3px var(--main-text-color);
   transition: all 0.3s ease;
@@ -116,4 +108,46 @@
 .arrow {
   width: 22px;
   height: 22px;
+}
+
+@media (max-width: 768px) {
+  .buyButton {
+    width: 90%;
+  }
+
+  .title {
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .leftBlock {
+    padding: 0 20px;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px auto;
+  }
+
+  .blocks {
+    flex-direction: column;
+  }
+
+  .photo::before {
+    width: 80%;
+    height: 80%;
+  }
+
+  .tons {
+    max-width: 55%;
+  }
+
+  .coin {
+    max-width: 50%;
+  }
+
+  .buyButton {
+    font-size: 90%;
+  }
 }

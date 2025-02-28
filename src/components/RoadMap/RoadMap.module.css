@@ -48,6 +48,7 @@
   border-left: 7px solid var(--main-text-color);
   border-radius: 5px;
   z-index: -1;
+  margin: 20px 0;
 }
 
 /* Media query for smaller screens */
@@ -60,5 +61,6 @@
   .phase {
     max-width: 100%; /* Make each phase block take up full width */
     margin: 10px 0; /* Reduce margin for better spacing */
+    min-height: 200px;
   }
 }

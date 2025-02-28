@@ -24,6 +24,14 @@
   word-wrap: break-word;
 }
 
+.elem:nth-child(2n) {
+  background-color: var(--secondary-blue-color);
+}
+
+.elem:nth-child(3n) {
+  background-color: var(--secondary-green-color);
+}
+
 .elem p {
   font-size: clamp(12px, 1.5vw, 16px);
 }
@@ -48,7 +56,7 @@
 .linktxt a::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -7px;
   left: 60px;
   rotate: -4deg;
   width: 166px;

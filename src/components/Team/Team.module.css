@@ -34,6 +34,7 @@
 
 .partnerElem:hover .img {
   transform: translateX(-50%) scale(0.7); /* Уменьшаем изображение, но точка привязки остается снизу */
+  bottom: -1px;
 }
 
 .txt {

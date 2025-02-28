@@ -1,6 +1,6 @@
 .img {
   max-width: 100%;
-  height: 702px;
+  height: auto;
   border-radius: 40px;
   border: 5px solid var(--main-text-color);
 }
@@ -39,4 +39,10 @@
 .frameTwo {
   top: 23%;
   left: 86%;
+}
+
+@media (max-width: 768px) {
+  .img {
+    border-radius: 75px;
+  }
 }
