@@ -1,18 +1,18 @@
+import { useTranslation } from "react-i18next";
 import css from "./Hero.module.css";
 import belochka from "../../assets/belochka.png";
 import tons from "../../assets/tons.png";
 import { MdArrowOutward } from "react-icons/md";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={css.hero}>
       <div className={css.blocks}>
         <div className={css.leftBlock}>
-          <h1 className={css.title}>СЛОВИ БЕЛКУ... С НАМИ!</h1>
-          <p className={css.text}>
-            Шутим... Мы создали самый стильный, самый народный и самый
-            уникальный токен современности.
-          </p>
+          <h1 className={css.title}>{t("hero.title")}</h1>
+          <p className={css.text}>{t("hero.text")}</p>
         </div>
         <div className={css.rightBlock}>
           <div className={css.photo}>
@@ -21,8 +21,14 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <button className={css.buyButton}>
-        Купить $BELOCHKA
+      <button
+        onClick={() =>
+          (window.location.href =
+            "https://t.me/blum/app?startapp=memepadjetton_BELOCHKA_LMQXl-ref_jVTo7UAUYu")
+        }
+        className={css.buyButton}
+      >
+        {t("hero.buyButton")}
         <MdArrowOutward className={css.arrow} />
       </button>
     </section>

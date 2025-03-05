@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   min-height: 100vh;
   overflow: hidden;
+  text-decoration: none;
 }
 .text {
   font-size: 24px;

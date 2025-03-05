@@ -1,10 +1,13 @@
 import { useState } from "react";
 import Logo from "../Logo/Logo";
 import { MdArrowOutward } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 import css from "./Header.module.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -28,20 +31,20 @@ const Header = () => {
           <nav className={`${css.menu} ${isMenuOpen ? css.menuOpen : ""}`}>
             <ul>
               <li>
-                <a href="#aboutus">О НАС</a>
+                <a href="#aboutus">{t("header.menu.aboutUs")}</a>
               </li>
               <li>
-                <a href="#roadmap">РОУДМАП</a>
+                <a href="#roadmap">{t("header.menu.roadMap")}</a>
               </li>
               <li>
-                <a href="#buy">КАК КУПИТЬ</a>
+                <a href="#buy">{t("header.menu.buy")}</a>
               </li>
               <li>
-                <a href="#team">КОМАНДА</a>
+                <a href="#team">{t("header.menu.team")}</a>
               </li>
               <li>
                 <a href="https://t.me/belochka_ton">
-                  <span>НАШ ТЕЛЕГРАМ</span>
+                  <span>{t("header.menu.telegram")}</span>
                   <MdArrowOutward className={css.arrow} />
                 </a>
               </li>

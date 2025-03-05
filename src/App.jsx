@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+import "./i18n";
 import "modern-normalize/modern-normalize.css";
 import Header from "./components/Header/Header";
 import "./App.css";
@@ -11,12 +13,14 @@ import Team from "./components/Team/Team";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
+  const { t } = useTranslation(); // Хук для получения функции перевода
+
   return (
     <>
-      <Header />
-      <Hero />
+      <Header title={t("header.title")} /> {/* Пример использования перевода */}
+      <Hero message={t("hero.mainMessage")} />
       <div className="wrapper">
-        <AboutUs />
+        <AboutUs title={t("aboutUs.title")} />
         <Partner />
         <RoadMap />
         <Price />

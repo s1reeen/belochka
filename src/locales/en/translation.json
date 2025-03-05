@@ -1,0 +1,106 @@
+{
+  "header": {
+    "menu": {
+      "aboutUs": "ABOUT US",
+      "roadMap": "ROADMAP",
+      "buy": "HOW TO BUY",
+      "team": "TEAM",
+      "telegram": "OUR TELEGRAM"
+    }
+  },
+  "hero": {
+    "title": "CATCH THE SQUIRREL... WITH US!",
+    "text": "Just kidding... We've created the most stylish, the most popular, and the most unique token of our time.",
+    "buyButton": "Buy $BELOCHKA"
+  },
+  "aboutUs": {
+    "section": "ABOUT THE PROJECT",
+    "title": "one of a kind",
+    "text": "Our team worked tirelessly through the nights to create a token that helps avoid getting caught by the squirrel in case of unsuccessful meme coin trading, because now it will always be in your wallet!"
+  },
+  "partner": {
+    "section": "PARTNERS",
+    "title": "our guys"
+  },
+  "roadmap": {
+    "section": "DEVELOPMENT",
+    "title": "ROADMAP",
+    "phases": [
+      {
+        "name": "Phase One",
+        "description": "Launching the token on Blum Memepad. Building a community and launching a marketing campaign, buying back supply"
+      },
+      {
+        "name": "Phase Two",
+        "description": "When reaching a market cap of $20,000, the team supply will be locked for two weeks"
+      },
+      {
+        "name": "Phase Three",
+        "description": "The $BELOCHKA token will be listed on STON.fi and DEX Screener will be paid"
+      },
+      {
+        "name": "Phase Four",
+        "description": "The team's budget will be used for liquidity support, marketing, and rewards for active community members"
+      },
+      {
+        "name": "Phase Five",
+        "description": "The marketing budget will be expanded to include holding contests among $BELOCHKA's active members"
+      }
+    ]
+  },
+  "price": {
+    "section": "FORECAST",
+    "title": "estimated price",
+    "linkText": "Why 1749?"
+  },
+
+  "buy": {
+    "section": "INSTRUCTION",
+    "title": "how to buy $belochka",
+    "steps": {
+      "step1": {
+        "title": "/1 Set up a wallet",
+        "description": "Create a wallet that works with the TON network."
+      },
+      "step2": {
+        "title": "/2 Buy TON",
+        "description": "You can do this on any exchange (Binance, ByBit, OKX, etc.)"
+      },
+      "step3": {
+        "title": "/3 Finalization",
+        "description": "Buy the $BELOCHKA token through Blum Memepad."
+      }
+    },
+    "guide": "A more detailed guide on how to buy the token is available in our"
+  },
+  "team": {
+    "section": "PARTNERS",
+    "title": "our team",
+    "members": [
+      {
+        "name": "Islambek Siply",
+        "image": "bomjO"
+      },
+      {
+        "name": "Tolik Dudnik",
+        "image": "bomjT"
+      },
+      {
+        "name": "Myamlya Dryakhly",
+        "image": "bomjS"
+      }
+    ]
+  },
+  "footer": {
+    "subscribe": "Subscribe to our Telegram",
+    "social": "Social Networks",
+    "contacts": "Contacts",
+    "address": "Crypto Investments St. 32a, entrance #4, Fufel City",
+    "phone": "+777-1749-1749-17-49",
+    "buy_token": "BUY TOKEN",
+    "copyright": {
+      "text1": "Copyright © 2025",
+      "text2": "All rights reserved"
+    }
+  }
+}

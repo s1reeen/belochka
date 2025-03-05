@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import SectionName from "../SectionName/SectionName";
 import price from "../../assets/price.png";
 import pricePhone from "../../assets/pricePhone.png";
@@ -9,6 +10,7 @@ import { useEffect, useState } from "react";
 
 const Price = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -21,7 +23,7 @@ const Price = () => {
 
   return (
     <>
-      <SectionName section="ПРОГНОЗ" title="предполагаемая цена" />
+      <SectionName section={t("price.section")} title={t("price.title")} />
       <div className={css.imageContainer}>
         <img
           className={css.img}
@@ -32,7 +34,7 @@ const Price = () => {
           className={css.link}
           href="https://youtu.be/23OjXSI99Nc?si=hmYSxO66Tq9DfepP&t=26"
         >
-          <span>Почему 1749?</span>
+          <span>{t("price.linkText")}</span>
           <MdArrowOutward className={css.arrow} />
         </a>
         {!isMobile && (
@@ -45,4 +47,5 @@ const Price = () => {
     </>
   );
 };
+
 export default Price;
